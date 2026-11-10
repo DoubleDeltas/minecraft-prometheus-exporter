@@ -12,6 +12,11 @@ Java 21 JDK. E.g.,
 JAVA_HOME=/usr/lib/jvm/java-21-openjdk
 ```
 
+Minecraft 26.1+ requires Java 25 instead (e.g., "mc26.2-forge"). Those projects
+use a Gradle toolchain targeting Java 25, which Gradle will download if it is
+not installed. A separate ".env" file can be placed in the project directory
+(e.g., "mc26.2-forge/.env") to override `JAVA_HOME` for that project.
+
 The "env-gradlew" script is a wrapper around "gradlew", and loads the ".env" file to ensure Gradle is run with the proper version of Java.
 
 
